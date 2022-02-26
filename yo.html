@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>encryption</title>
+	<link rel="stylesheet" type="text/css" href="yo.css">
+	<script type="text/javascript">
+		                   //for user-1
+		function encrypt(){
+			var rawdata = document.getElementById("name").value;
+			var temptext = " ";
+			for (var i = 0; i < rawdata.length; i++) {
+				temptext += enc(rawdata[i]);
+			}
+			document.getElementById("display").innerHTML = temptext;
+		}
+		function decrypt(){
+			var rawdata = document.getElementById("display3").innerText;
+			var temptext = " ";
+			for (var i = 0; i < rawdata.length; i++) {
+				temptext += dec(rawdata[i]);
+			}
+			document.getElementById("display4").innerHTML = temptext;
+		
+		}
+		function send2(){
+			document.getElementById("display5").innerHTML = document.getElementById("display").innerText;
+		}
+
+		
+		//message encryption
+		function enc(x){
+
+			switch (x){
+				case " " :
+					return "?";
+					break;
+				case "a" :
+					return ">";
+					break;
+				case "b" :
+					return "@";
+					break;
+				case "c" :
+					return "#";
+					break;
+				case "d" :
+					return "$";
+					break;
+				case "e" :
+					return "%";
+					break;
+				case "f" :
+					return "^";
+					break;
+				case "g" :
+					return "&";
+					break;		
+				case "h" :
+					return "*";
+					break;		
+				case "i" :
+					return "(";
+					break;		
+				case "j" :
+					return "_";
+					break;		
+				case "k" :
+					return "+";
+					break;		
+				case "l" :
+					return ":";
+					break;		
+				case "m" :
+					return "=";
+					break;		
+				case "n" :
+					return "-";
+					break;		
+				case "o" :
+					return "{";
+					break;		
+				case "p" :
+					return ";";
+					break;		
+				case "q" :
+					return ",";
+					break;		
+				case "r" :
+					return "1";
+					break;		
+				case "s" :
+					return ".";
+					break;		
+				case "t" :
+					return "`";
+					break;		
+				case "u" :
+					return "~";
+					break;		
+				case "v" :
+					return "/";
+					break;		
+				case "w" :
+					return "}";
+					break;		
+				case "x" :
+					return "[";
+					break;	
+				case "y" :
+					return "|";
+					break;		
+				case "z" :
+					return "]";
+					break;																		
+
+													
+			}
+		}
+
+		
+		                      //for user-2
+		function encrypt1(){
+			var rawdata = document.getElementById("name2").value;
+			var temptext = " ";
+			for (var i = 0; i < rawdata.length; i++) {
+				temptext += enc(rawdata[i]);
+			}
+			document.getElementById("display2").innerHTML = temptext;
+		}
+		function decrypt2(){
+			var rawdata = document.getElementById("display5").innerText;
+			var temptext = " ";
+			for (var i = 0; i < rawdata.length; i++) {
+				temptext += dec(rawdata[i]);
+			}
+			document.getElementById("display6").innerHTML = temptext;
+		
+		}
+		function send(){
+			document.getElementById("display3").innerHTML = document.getElementById("display2").innerText;
+		}
+		//message decryption
+		function dec(x){
+
+			switch (x){
+				case "?" :
+					return " ";
+					break;
+				case ">" :
+					return "a";
+					break;
+				case  "@":
+					return "b";
+					break;
+				case "#" :
+					return "c";
+					break;
+				case "$" :
+					return "d";
+					break;
+				case "%" :
+					return "e";
+					break;
+				case "^" :
+					return "f";
+					break;
+				case "&" :
+					return "g";
+					break;		
+				case "*" :
+					return "h";
+					break;		
+				case "(" :
+					return "i";
+					break;		
+				case "_" :
+					return "j";
+					break;		
+				case "+" :
+					return "k";
+					break;		
+				case ":" :
+					return "l";
+					break;		
+				case "=" :
+					return "m";
+					break;		
+				case "-" :
+					return "n";
+					break;		
+				case "{" :
+					return "o";
+					break;		
+				case ";" :
+					return "p";
+					break;		
+				case "," :
+					return "q";
+					break;		
+				case "1" :
+					return "r";
+					break;		
+				case "." :
+					return "s";
+					break;		
+				case "`" :
+					return "t";
+					break;		
+				case "~" :
+					return "u";
+					break;		
+				case "/" :
+					return "v";
+					break;		
+				case "}" :
+					return "w";
+					break;		
+				case "[" :
+					return "x";
+					break;	
+				case "|" :
+					return "y";
+					break;		
+				case "]" :
+					return "z";
+					break;							
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>CRYPTOROOM</h1>
+	<div align="center" class="step1">
+		
+
+		                  <!__ for user-1 __>
+
+	<div class="user1">	                  
+ 	<p>Recieved data:</p><span id="display3" style="padding: 10px;
+ 											  display: block;
+ 											  background-color: #cccccc;
+	                                          border-width: 5px;
+	                                    	  border-color: #00ffff;
+	                                    	  border-style: outset;
+	                                    	  width: 200px;
+	                                    	  height: 30px;
+	                                    	  overflow: auto;">
+	               </span>
+	<input type="button" name="btn5" id="btn5" value="decrypt" onclick="decrypt();">
+	<br/>
+	<div class="msg1">
+	<p>message:</p> <span id="display4" style="padding-right:50px;
+										display: block;
+	                                    border-width: 5px;
+	                                    background-color: #cccccc;
+	                                    border-color: #00ffff;
+	                                    border-style: outset;
+	                                    width: 200px;
+	                                    height: 50px;
+	                                    overflow: auto;">
+	         </span>
+</div>
+</div>
+	<br/>
+	<input type="text" placeholder="Type a message" id="name">
+	<input type="button" name="btn1" id="btn1" value="encrypt" onclick="encrypt();">
+	
+	<br/>
+	<p style="color: #ff0000; font-size: 20px; filter: drop-shadow(3px 3px 4px #00ffff);">encrypted text:</p> <span id="display" style="display: block;
+	                                          border-width: 5px;
+	                                          border-color: #ff0000;
+	                                          border-style: outset;
+	                                          background-color: #cccccc;
+	                                          width: 250px;
+	                                          height: 50px;
+	                                          overflow: auto;">
+	</span>
+	<input type="button" name="btn6" id="btn6" value="send" onclick="send2();">
+</div>
+	
+	
+
+	                     <!--__for user-2__-->
+<div align="center" class="step2">                                         
+	<div class="user2">		
+	<p>Recieve data:</p> <span id="display5" style="display: block;
+										padding: 10px;
+										background-color: #cccccc;
+	                                    border-width: 5px;
+	                                    border-color: #00ffff;          
+	                                    border-style: outset;
+	                                    width: 200px;
+	                                    height: 30px;
+	                                    overflow: auto;">
+	              </span>
+	<input type="button" name="btn4" id="btn4" value="decrypt" onclick="decrypt2();">
+	<br>
+	<div class="msg2">
+	<p>message:</p> <span id="display6" style="padding-right:55px;
+									   display: block;
+									   background-color: #cccccc;
+	                                    border-width: 5px;
+	                                    border-color: #00ffff;
+	                                    border-style: outset;
+	                                    width: 200px;
+	                                    height: 50px;
+	                                    overflow: auto;">
+			</span>
+</div>
+</div>
+<br/>
+	<input style="" type="text" name="name" id="name2" placeholder="Type a message">
+	<input type="button" name="btn2" id="btn2" value="encrypt" onclick="encrypt1();">
+	<br/>
+	<p style="color: #ff0000; font-size: 20px; filter: drop-shadow(3px 3px 4px #00ffff);">encrypted data:</p> <span id="display2" style="
+											  display: block;
+											  background-color: #cccccc;
+	                                    	  border-width: 5px;
+	                                    	  border-color: #ff0000;
+	                                    	  border-style: outset;
+	                                    	  width: 250px;
+	                                    	  height: 50px;
+	                                    	  overflow: auto;">
+					</span>
+	<input type="button" name="btn3" id="btn3" value="send" onclick="send();">
+
+</div>
+</body>
+</html>
